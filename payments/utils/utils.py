@@ -162,12 +162,12 @@ def delete_custom_fields():
 
 def before_install():
 	# TODO: remove this
-	# This is done for erpnext CI patch test
+	# This is done for draerp CI patch test
 	#
 	# Since we follow a flow like install v14 -> restore v10 site
 	# -> migrate to v12, v13 and then v14 again
 	#
 	# This app fails installing when the site is restored to v10 as
-	# a lot of apis don;t exist in v10 and this is a (at the moment) required app for erpnext.
+	# a lot of apis don;t exist in v10 and this is a (at the moment) required app for draerp.
 	if not frappe.get_meta("Module Def").has_field("custom"):
 		return False
